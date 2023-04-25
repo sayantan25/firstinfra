@@ -63,16 +63,16 @@ resource "aws_instance" "saya_main" {
 #   }
 
 # }
-resource "null_resource" "grafana_install" {
+# resource "null_resource" "grafana_install" {
 
-  depends_on = [aws_instance.saya_main]
+#   depends_on = [aws_instance.saya_main]
   
-  provisioner  "local-exec" {
+#   provisioner  "local-exec" {
   
-    command = "ansible-playbook -i aws_hosts --key-file /home/ubuntu/.ssh/sayakey playbooks/main-playbook.yml"
+#     command = "ansible-playbook -i aws_hosts --key-file /home/ubuntu/.ssh/sayakey playbooks/main-playbook.yml"
     
-  }
-}
+#   }
+# }
 
 
 

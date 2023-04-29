@@ -18,7 +18,7 @@ pipeline {
     
       steps {
       
-        sh 'terraform plan -no-color'
+        sh 'terraform plan -no-color -lock=false'
      }
         
     }

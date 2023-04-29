@@ -22,7 +22,7 @@ pipeline {
      }
         
     } 
-    stage('plan') {
+    stage('apply') {
       steps {
       sh 'terraform apply -auto-approve -no-color -lock=false'
    }

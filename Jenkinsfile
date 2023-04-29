@@ -21,6 +21,16 @@ pipeline {
         sh 'terraform plan -no-color -lock=false'
      }
         
-    }
+    } 
+    stage('plan') {
+      steps {
+      sh 'terraform apply -auto-approve -no-color -lock=false'
    }
+  }
+  stage('destroy') {
+      steps {
+      sh 'terraform destroy -auto-approve -no-color -lock=false'
+   }
+  }
+  }
   }
